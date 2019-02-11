@@ -1,10 +1,15 @@
 function setup() {
-  createCanvas(400, 400);
+  var cnv = createCanvas(400, 400);
+  cnv.parent('#placeHolder');
+  //Slider
   slider = createSlider(10,100,50);
 }
 
 function draw() {
   background(213, 222, 237);
+  slider.position(130,300)
+
+
   let InductiveKVA = 1754;
   let PI = 3.14159;
   var capacitance = slider.value();
@@ -81,7 +86,6 @@ function draw() {
   fill(255,255,255);
   triangle(200,300,350,300,350,y3-20)
 
-console.log(y3)
 
 
 
